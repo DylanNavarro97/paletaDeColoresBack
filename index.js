@@ -3,6 +3,8 @@ import cors from 'cors'
 import 'dotenv/config'
 import morgan from 'morgan';
 import {fileURLToPath} from 'url'
+import TareasRouter from './src/routes/colores.routes.js'
+import path from 'path';
 
 const app = express();
 
@@ -19,9 +21,6 @@ const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 app.use(express.static(path.join(__dirname, '/public')))
 
-app.get("/", (req, res) => {
-    console.log("alguien solicito algo");
-    res.send('respuesta desde el backend')
-  });
+app.use('/api', TareasRouter)
 
 
