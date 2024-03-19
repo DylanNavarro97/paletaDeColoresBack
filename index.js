@@ -5,6 +5,7 @@ import morgan from 'morgan';
 import {fileURLToPath} from 'url'
 import TareasRouter from './src/routes/colores.routes.js'
 import path from 'path';
+import './src/database/database.js'
 
 const app = express();
 

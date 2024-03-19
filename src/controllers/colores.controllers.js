@@ -27,3 +27,5 @@ export const crearColor = async (req, res) => {
     }
 }
 
+export const borrarColor = async (req, res) => {}
+

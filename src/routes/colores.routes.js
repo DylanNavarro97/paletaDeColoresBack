@@ -1,8 +1,9 @@
 import { Router } from "express";
-import { crearColor, listarColores } from "../controllers/colores.controllers.js";
+import { borrarColor, crearColor, listarColores } from "../controllers/colores.controllers.js";
 
 const router = Router();
 
 router.route("/colores").get(listarColores).post(crearColor)
+router.route("/color").delete(borrarColor)
 
 export default router
