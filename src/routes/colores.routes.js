@@ -4,6 +4,6 @@ import { borrarColor, crearColor, listarColores } from "../controllers/colores.c
 const router = Router();
 
 router.route("/colores").get(listarColores).post(crearColor)
-router.route("/color").delete(borrarColor)
+router.route("/color/:id").delete(borrarColor)
 
 export default router
